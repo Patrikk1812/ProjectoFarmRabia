@@ -1,34 +1,51 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
 body{
     height: 100vh;
     width: 100vw;
 }
+
 header{
     height: 10%;
     background-color: rgb(72, 151, 255)
 }
+
 nav{
     height: 5%;
     background-color: white;
-    border: 1em;
-    border-color: black;
     min-height: 2em; 
 }
 
+h1{
+    text-align: center;
+}
+
 .dropdown {
-    display: flex;
-    flex: 3;
+    display: block;
+    color: white;
+    background-color: darkblue;
     position: relative;
-    outline: black 1px solid;
+    border: none;
+    position: absolute;
+    padding: 0.4rem;
+    border-radius: 2rem;
+    
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #b3d9ff;
-    width: 6.8vw;
     outline: black 1px solid;
     text-decoration: none;
     list-style: none;
+
+    min-width: 12rem;
+
 }
 
 .dropdown:hover .dropdown-content {
