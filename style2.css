@@ -1,68 +1,134 @@
 *{
-    margin: 0;
-    padding: 0;
     border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body{
     height: 100vh;
     width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 header{
-    height: 10%;
-    background-color: aquamarine;
+    /*height: 10%;*/
+    background-color: rgb(72, 151, 255);
+
+    display: flex;
+    flex-direction: row;
 }
+
+.headerDrop{
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+}
+
+.categoriesText
+{
+    font-size: 2em;
+}
+
+.headerTitle2{
+    flex: 8;
+
+    background-color: darkblue;
+    border: 1px solid black;
+}
+
+
 
 nav{
     height: 5%;
-    background-color: indigo;
-
+    background-color: white;
     min-height: 2em; 
 }
 
-#llistaDesplegable {
-    list-style: none inside;
+h1{
     text-align: center;
 }
 
-#llistaDesplegable li {
-    display: block;
-    position: relative;
+nav {
+    overflow: hidden;
+    background-color: darkblue;
+}
+  
+nav a {
     float: left;
-
-    background-color: indigo;
-}
-
-#llistaDesplegable li a {
-    display: block;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    padding: 1rem;
     text-decoration: none;
-    width: 10em;
-    line-height: 2em;
-    color: #ffffff;
 }
-
-#llistaDesplegable li:hover {
-    background-color: blueviolet;
+  
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
-
-#llistaDesplegable ul {
-    position: absolute;
-    padding: 0;
-    left: 0;
+  
+.dropdown .dropbtn {
+    font-size: 1rem;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 1rem;
+    background-color: inherit;
+}
+  
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: blue;
+    color: white;
+}
+  
+.dropdown-content {
     display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 25%;
+    height: 90vh;
+    left: 0;
+    box-shadow: 0rem 0.5rem 1rem 0rem lightblue;
+    z-index: 1;
 }
-
-#llistaDesplegable li:hover ul {
+  
+.dropdown:hover .dropdown-content {
     display: block;
 }
+  
 
-main{
-    height: 70%;
-    background-color: cadetblue;
+.column {
+    float: left;
+    width: 100%;
+    height: 90vh;
+    padding: 1rem;
+    background-color: lightblue;
+}
+  
+.column a {
+    float: none;
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.column a:hover {
+    background-color: #ddd;
 }
 
-footer{
-    height: 15%;
-    background-color: deepskyblue;
+.row{
+    height: 90vh;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
