@@ -1,33 +1,42 @@
-body {
-    background-color: #0d1117; /* Azul oscuro */
-    color: #ffffff; /* Blanco */
-    font-family: Arial, sans-serif; /* Tipo de fuente */
-    margin: 0;
+*{
+    border: 0;
     padding: 0;
-  }
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+
+
+header{
+    background-color: darkblue;
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    padding: 1em;
+    height: 70vh;
+    text-align: left; 
+    border-radius: 12em;
+}
   
-  .header {
-    background-color: #000000; /* Negro */
-    color: #ffffff; /* Blanco */
-    padding: 10px;
+footer {
+    margin-top: 5%;
+    background-color: #333; /* Color de fondo oscuro */
+    color: white;
     text-align: center;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .section {
-    padding: 20px;
-  }
-  
-  .footer {
-    background-color: #000000; /* Negro */
-    color: #ffffff; /* Blanco */
-    padding: 10px;
-    text-align: center;
-  }
+    padding: 1em;
+}
+
 
 .headerDrop{
     flex: 1;
@@ -78,18 +87,20 @@ nav a {
 
 .contenido1 {
     padding-right: 5%; 
-    background-color: #0d1117;
-    height: 74vh; 
+    background-color: #000;
+    height: 100%; 
     box-sizing: border-box; 
     float: left;
+    outline: darkblue 0.1em solid;
   }
   
   .contenido2 {
     padding-right: 5%; 
-    background-color: #0d1117;
-    height: 74vh; 
+    background-color: #000;
+    height: 100%; 
     box-sizing: border-box; 
     float: right;
+    outline: darkblue 0.1em solid;
   }
   
 .dropdown {
@@ -102,12 +113,12 @@ nav a {
     border: none;
     outline: none;
     color: white;
-    padding: 1.2rem;
     background-color: inherit;
+    padding: 1rem;
 }
   
 nav a:hover, .dropdown:hover .dropbtn {
-    background-color: blue;
+    background-color: darkblue;
     color: white;
 }
   
@@ -132,7 +143,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     width: 100%;
     height: 90vh;
     padding: 1rem;
-    background-color: lightblue;
+    background-color: rgb(225, 232, 234);
 }
   
 .column a {
@@ -158,29 +169,41 @@ nav a:hover, .dropdown:hover .dropbtn {
     clear: both;
 }
 
-/* Estilos específicos para la página */
 .headerTitle {
     font-size: 2em;
  
 }
 
+.nube{
+    background-color: rgb(217, 217, 246);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    max-height: auto;
+    flex-direction: column;
+    padding: 8px;
+    width: auto;
+}
+
 h2 {
     margin-top: 1em;
-    color: white;
+    color: #333;
     border-bottom: 2px solid #333333;
     padding-bottom: 0.4em;
     margin-left: 7%;
     margin-right: 7%;
 }
 
-#Imatge_gos1{
-    height: 8em;
-    width: 10em;
-    margin-left: 5em;
-    margin-top: 2em;
-}
-
 .Texto{
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#Gos1{
+    flex-direction: row;
+    height: 23em;
+    width: 25em;
+    margin-top: 2%;
+    margin-left: 10%;
+    display: inline;
 }
